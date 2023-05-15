@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #ffd500;
+    --white-color: #ffffff;
+    --dark-color: #010101;
+    --menu-bg-color: #212529;
+    --transition: .9s;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bar {
+    background-color: var(--menu-bg-color);
+    padding: 25px 0;
+    position: relative;
+}
+.bar .icon i{
+    display: none;
+}
+
+@media (max-width:725px) {
+    .bar .icon i{
+        display: block;
+        cursor: pointer;
+        font-size: 2.5rem;
+    }
+    .muna{
+        position: absolute;
+            top: 100%;
+        width: 100%;
+        background-color: var(--menu-bg-color);
+        display: none;
+    }
+    .muna ul{
+        flex-direction: column;
+        align-content: flex-start !important;
+        padding: 0 50px !important;
+    }
+        .muna ul li {
+            padding:  8px 0 !important;
+        }
+}
+.bar-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.muna ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+        flex-wrap: wrap;
+}
+
+.muna ul li {
+    padding: 0 15px;
+}
+
+.muna ul li a {
+    font-size: 1.5rem;
+    color: #909090;
+    padding-bottom: 3px;
+    transition: var(--transition);
+}
+
+.muna ul li a:hover {
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--white-color);
+}
+
+.prof {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.my-img img {
+    max-width:500px;
+}
+
+.prof-tx {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.prof-tx h1 {
+    position: relative;
+    padding: 8px 5px 8px 15px !important;
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border-left: 5px solid var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.prof-tx h1::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    top: 0;
+    right: -14px;
+    background-color: var(--dark-color);
+    transform: skewX(27deg);
+    z-index: -1;
+
+}
+
+.prof-tx h1:first-child strong {
+    font-size: 2.3rem;
+    color: var(--primary-color) !important;
+}
+
+.prof-tx h1:last-child {
+    width: fit-content;
+    margin-top: 20px !important;
+}
